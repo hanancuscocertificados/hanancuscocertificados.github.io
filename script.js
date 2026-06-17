@@ -76,7 +76,7 @@ function checkCertificate(dni) {
         `;
         certificatePreview.classList.remove('hidden');
         filenameDisplay.textContent = `Certificado_${dni}.pdf`;
-        downloadBtn.href = `${dni}.pdf`;
+        downloadBtn.href = `${dni}[FP].pdf`;
     } else {
         statusIndicator.className = 'status-indicator invalid';
         statusTitle.textContent = 'REGISTRO NO ENCONTRADO';
