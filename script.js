@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             certificatePreview.classList.remove('hidden');
             filenameDisplay.textContent = `Certificado_${dni}.pdf`;
             // Point to the subfolder
-            downloadBtn.href = `certificados/${dni}.pdf`;
+            downloadBtn.href = `${dni}.pdf`;
         } else {
             // ERROR
             statusIndicator.className = 'status-indicator invalid';
