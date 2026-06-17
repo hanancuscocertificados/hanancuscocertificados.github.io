@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Certificados | HANAN CUSCO</title>
+    <!-- Inter & Roboto Mono for Engineering Feel -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="vignette"></div>
+
+    <div class="main-wrapper">
+        <header class="fade-in">
+            <div class="brand-badge">
+                <span class="company-name">HANAN CUSCO CONSULTORIA</span>
+                <span class="system-status">● SYSTEM ONLINE</span>
+            </div>
+        </header>
+
+        <main class="content-container">
+            <div class="hero-section fade-in delay-1">
+                <h1 class="hero-title">Validación de <br>Certificados</h1>
+                <p class="hero-subtitle">Sistema de verificación centralizado. Ingrese el identificador único del
+                    participante para acceder a la documentación oficial.</p>
+            </div>
+
+            <div class="verification-interface fade-in delay-2">
+                <form id="searchForm" class="search-form">
+                    <div class="input-container">
+                        <label for="dniInput" class="input-label">IDENTIFICADOR (DNI)</label>
+                        <input type="text" id="dniInput" placeholder="00000000" maxlength="15" autocomplete="off"
+                            required>
+                        <div class="input-highlight"></div>
+                    </div>
+                    <button type="submit" class="action-btn">
+                        <span>INICIAR BÚSQUEDA</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Processing UI -->
+                <div id="processingState" class="processing-state hidden">
+                    <div class="loader-track">
+                        <div class="loader-bar"></div>
+                    </div>
+                    <div class="terminal-text">
+                        <span id="terminalLog">Iniciando protocolo de búsqueda...</span>
+                    </div>
+                </div>
+
+                <!-- Result UI -->
+                <div id="resultCard" class="result-card hidden">
+                    <div class="card-header">
+                        <div id="statusIndicator" class="status-indicator"></div>
+                        <span id="statusTitle">RESULTADO</span>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="resultMessage" class="result-message"></p>
+
+                        <div id="certificatePreview" class="certificate-preview hidden">
+                            <div class="file-icon">PDF</div>
+                            <div class="file-info">
+                                <span class="filename" id="filenameDisplay">certificado.pdf</span>
+                                <span class="filesize">Documento Verificado</span>
+                            </div>
+                            <a href="#" id="downloadBtn" target="_blank" class="download-btn">
+                                ABRIR DOCUMENTO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="fade-in delay-3">
+            <div class="tech-specs">
+                <div class="spec-row">
+                    <span class="label">RUC</span>
+                    <span class="value">20607315206</span>
+                </div>
+                <div class="spec-row">
+                    <span class="label">ENTIDAD</span>
+                    <span class="value">HANAN CUSCO CC S.C.R.L.</span>
+                </div>
+                <div class="spec-row">
+                    <span class="label">REGISTRO</span>
+                    <span class="value">ACTIVO / HABIDO (2021)</span>
+                </div>
+            </div>
+            <p class="copyright">SECURE CERTIFICATE VERIFICATION SYSTEM © 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
